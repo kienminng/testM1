@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1200px" height="800px" style="border: 1px solid black"></canvas>
+
+<script>
+  class Rectangle {
+    x;
+    y;
+    width;
+    height;
+
+    constructor(x,y,width,height) {
+      this.x=x
+      this.y=y
+      this.width=width
+      this.height=height
+    }
+    // cách này hay hơn cách dươi
+    // render(canvas){
+    //   let context = canvas.getContext("2d")
+    //   context.fillRect(this.x,this.y,this.width,this.height)
+    //   context.fillStyle="#ff0000"
+
+    // }
+
+  }
+
+  // let canvas=document.getElementById('myCanvas')
+  // let h1 = new Rectangle(100,100,100,100)
+  // h1.render(canvas)
+
+
+
+  function createHcn(){
+    let ctx = document.getElementById("myCanvas").getContext("2d")
+    let x = +prompt('toạ độ x ')
+    let y= +prompt('toạ độ y ')
+    let width = +prompt('chiều dài')
+    let height = +prompt('chiều cao')
+    let rectangle =new Rectangle(x,y,width,height)
+
+    ctx.strokeStyle = "#00FF00"
+    ctx.strokeRect (rectangle.x,rectangle.y,rectangle.width,rectangle.height)
+  }
+
+  createHcn()
+</script>
+</body>
+</html>

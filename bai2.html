@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(array, x, index) {
+        for (let i = 0; i <= array.length; i++) {
+            if (i == index) {
+                for (let j = (array.length - 1); j >= i; j--) {
+                    array[j + 1] = array[j];
+                }
+                array[i] = x;
+            }
+        }
+        return array
+    }
+
+    let arr = [1, 2, 3, 4, 5, 6]
+    let index = Number(prompt("Nhập số index"));
+    let x = Number(prompt("Nhập số x"));
+    let result = insertNumberToArray(arr, x, index);
+    alert(result)
+</script>
+</body>
+</html>

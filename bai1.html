@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+  let arrayPoint = [];
+  let n = Number(prompt("Bạn thi mấy môn?: "));
+
+  function duyetMang(n) {
+    for (let i = 0; i < n; i++) {
+      arrayPoint[i] = Number(prompt("Vui lòng nhập điểm vào mảng bạn vừa cung cấp" + " điểm ở vị trí mảng" + i));
+    }
+  }
+
+  function findAvg(arrayPoint) {
+    let sum = 0;
+    let avg;
+    let x = arrayPoint;
+    for (let i = 0; i < x.length; i++) {
+      sum += x[i];
+    }
+    avg = sum / (x.length);
+    return avg;
+  }
+
+  duyetMang(n);
+  alert('Điểm trung bình của bạn là: ' + findAvg(arrayPoint));
+</script>
+
+</body>
+</html>

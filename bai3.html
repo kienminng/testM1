@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+  function checkSNT(n) {
+    let count = 0
+    for (let i = 0; i <= n; i++) {
+      if (n % i == 0) {
+        count++
+      }
+    }
+    if (count === 2) {
+      return n
+    }
+  }
+
+  function sumOfListPrime(x) {
+    let sum = 0
+    for (let j = 0; j <= x; j++) {
+      checkSNT(j)
+      if (checkSNT(j) == j) {
+        sum = sum + j
+      }
+    }
+    return sum
+  }
+
+  let a = prompt('nhập số tới vị trí index')
+  alert(sumOfListPrime(a))
+</script>
+</body>
+</html>
